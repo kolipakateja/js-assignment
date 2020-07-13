@@ -1,0 +1,28 @@
+<html>
+   <center>
+   <head>
+      <h1>first java script program assignment-1</h1>
+   </head>
+   <body>
+    <p id="first"></p> 
+    <p id="time"></p>
+      <script style="color:red;">
+        var d=new Date();
+        var day = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+         document.getElementById("first").innerHTML="Today is : "+day[d.getDay()];
+        var a=" ";
+        a=d.getHours();
+        if(a>12)
+        {
+        a=a-12;
+        a=a+" PM";
+        }
+       else
+        {
+        a=a+" AM";
+         }
+        document.getElementById("time").innerHTML="Current Time is : "+a+" : "+d.getMinutes()+" : "+d.getSeconds();
+      </script>
+   </body>
+    </center>
+</html>
