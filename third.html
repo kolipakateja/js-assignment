@@ -1,0 +1,25 @@
+<html>
+   <center>
+   <head>
+      <h1>third java script program Assignment-1</h1> 
+   </head>
+    <body>
+           <p id="third1"></p>
+           <p id="third2"></p>
+           <p id="third3"></p>
+           <p id="third4"></p>
+           <script>
+             var d=new Date();
+             var dd,mm,y;
+             dd=d.getDate();
+             mm=d.getMonth()+1;
+             y=d.getFullYear()
+             document.getElementById("third1").innerHTML="mm-dd-yyyy : "+mm+" - "+dd+" - "+y;
+             document.getElementById("third2").innerHTML="mm/dd/yyyy : "+mm+" / "+dd+" / "+y;
+             document.getElementById("third3").innerHTML="dd-mm-yyyy : "+dd+" - "+mm+" - "+y;
+             document.getElementById("third4").innerHTML="dd/mm/yyyy : "+dd+" / "+mm+" / "+y;
+             
+           </script>
+    </body>
+    </center>
+</html>
