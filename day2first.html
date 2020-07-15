@@ -1,0 +1,35 @@
+<html>
+<head>
+   <h1>Day2 Assignment java Script</h1>
+   <h2>various console methods</h2>
+</head>
+<body>
+   <script>
+   //clearing the console data
+       console.clear();
+   //printing the data in console
+      console.log("hello");
+	  console.log([1,2,3,4]);
+   //printing error message in console
+      console.error("this is a error message");
+   //show warning in console
+       console.warn("warning message be alert");   
+   //time taken to execute 
+   console.time("time taken");
+   let message=function()
+   {
+    console.log("this message in time slot");
+   }
+   message();
+   console.timeEnd("time taken");
+   //data in the form of table
+   console.table({'one':1,'two':2,'three':3});
+   //group method
+   console.group('group'); 
+		console.log('hello'); 
+		console.log('hii'); 
+		console.log('good morning'); 
+   console.groupEnd('group');
+   </script>
+</body>
+</html>

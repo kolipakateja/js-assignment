@@ -1,0 +1,32 @@
+<html>
+<head>
+   <h1>Day2 Assignment java script</h1>
+   <h1>var,let,const examples</h1>
+</head>
+<body>
+<script>
+//var is globally scoped
+var second="program";
+if(1)
+{
+var second="hello programmer";
+}
+console.log(second);//output is hello programmmer
+
+//let is locally scoped
+let second1="program";
+if(1)
+{
+let second1="hello programmer";
+}
+console.log(second1);//output is program
+
+//const it can be declered once
+const second2="good morning";
+const second2="good afternoon";//it gives an error 'second2' has been already declered
+console.log(second2);
+
+</script>
+</body>
+
+</html>
