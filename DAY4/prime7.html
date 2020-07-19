@@ -1,0 +1,30 @@
+<html>
+<center>
+<head>
+   <h1>ASSIGNMENT-4 DAY-4 prime numbers upto N</h2>
+</head>
+<body>
+   <script>
+    N=+prompt("please enter the N value");
+    var i=2;
+    var j=1;
+    var list=[]
+   for(i=2;i<=N;i++)
+   {
+    var c=1;
+    for(j=1;j<=Number(Math.sqrt(i));j++)
+     {
+     if(i%j==0)
+     c+=1
+     if(c>2)
+     break
+     }
+    if(c==2)
+    list.push(i);
+   }
+  console.log(list);
+document.write(`the prime numbers upto N are ${list}`);
+   </script>
+</body>
+</center>
+</html>

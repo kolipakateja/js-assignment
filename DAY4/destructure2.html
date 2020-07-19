@@ -1,0 +1,21 @@
+<html>
+  <center>
+  <head>
+      <h1>DAY -4 ASSIGNMENT DESTRUCTURE</h1>
+  </head>
+   <body>
+     <script>
+      const student={
+         name : "javaScript",
+         age  : "20",
+         projects : {
+               spamdetector: "project is detecting  message is spam or not",
+              }
+       }
+    const {name,age,projects:{spamdetector}}=student;
+    document.write(`the student name is <mark>"${name}"</mark> and his age is <mark>"${age}"</mark> and he did <mark>"${spamdetector}"</mark>`);
+    console.log(`the student name is "${name}" and his age is "${age}" and he did "${spamdetector}"`);
+     </script>
+   </body>
+  </center>
+</html>

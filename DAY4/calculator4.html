@@ -1,0 +1,74 @@
+<html>
+  <center>
+  <head>
+    <h1>javascript calculator Assignment</h1> 
+  </head>
+   <!-- create table -->
+<body>
+<div>CALCULATOR</div>
+   <table border="3">
+       <tr>
+           <td><input type="button" value="c" onclick="clr()"/> </td>
+           <td colspan="3"><input type="text" id="evaluate"/></td>
+      </tr>
+      <tr>
+          <td><input type="button" value="+" onclick="display('+')"/> </td>
+          <td><input type="button" value="1" onclick="display('1')"/> </td>
+          <td><input type="button" value="2" onclick="display('2')"/> </td>
+         <td><input type="button" value="3" onclick="display('3')"/> </td>
+     </tr>
+      <tr>
+        <td><input type="button" value="-" onclick="display('-')"/> </td>
+        <td><input type="button" value="4" onclick="display('4')"/> </td>
+        <td><input type="button" value="5" onclick="display('5')"/> </td>
+        <td><input type="button" value="6" onclick="display('6')"/> </td>
+     </tr>
+     <tr>
+         <td><input type="button" value="*" onclick="display('*')"/> </td>
+         <td><input type="button" value="7" onclick="display('7')"/> </td>
+         <td><input type="button" value="8" onclick="display('8')"/> </td>
+          <td><input type="button" value="9" onclick="display('9')"/> </td>
+     </tr>
+      <tr>
+          <td><input type="button" value="/" onclick="display('/')"/> </td>
+          <td><input type="button" value="." onclick="display('.')"/> </td>
+          <td><input type="button" value="0" onclick="display('0')"/> </td>
+          <td><input type="button" value="%" onclick="display('%')"/> </td>
+           
+      </tr>
+      <tr>
+          <td><input type="button" value="sqrt" onclick="display(' Math.sqrt(')"/> </td>
+          <td><input type="button" value="(" onclick="display('(')"/> </td>
+           <td><input type="button" value=")" onclick="display(')')"/> </td>
+           <td><input type="button" value="=" onclick="solve()"/> </td>
+      </tr>
+</table>
+
+<script>
+      function display(val)
+     {
+      document.getElementById("evaluate").value+=val;
+    }
+    function solve()
+    {
+       var x = document.getElementById("evaluate").value;
+      if(x.search("%")>0)
+      {
+       x=x.split("%")
+       var sum=Number(x[0])*Number(x[1])/100;
+      document.getElementById("evaluate").value = sum;
+      }
+     else
+     {
+      var y = eval(x);
+      document.getElementById("evaluate").value = y;
+     }
+    }
+    function clr()
+    {
+    document.getElementById("evaluate").value = "";
+   }
+</script>
+</body>
+  </center>
+</html>

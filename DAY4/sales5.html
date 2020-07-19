@@ -1,0 +1,30 @@
+<html>
+  <center>
+   <head>
+        <h1>SALES DEPARTMENT</h1>
+    </head>
+     <body>
+        <script>
+          var revenue=+prompt("enter the sales made by employee");
+           if(revenue<=5000)
+            {
+              var k=(revenue*2)/100;
+             }
+          else if(revenue<=10000 && revenue>5000)
+            {
+              var k=(revenue*5)/100;
+             }
+          else if(revenue<=20000 && revenue>10000)
+            {
+              var k=(revenue*5)/100;
+             }
+          else
+          {
+          var k=(revenue*10)/100
+          }
+         console.log(`the commision earned by employee is ${k} rupees`);
+         document.write(`the commision earned by employee is ${k} rupees`);
+         </script>
+     </body>
+     </center>
+</html>
