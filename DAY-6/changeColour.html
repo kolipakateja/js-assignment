@@ -1,0 +1,24 @@
+<html>
+<center>
+    <head>
+         <h1>ASSIGNMENT  DAY-6 CHANGING BACKGROUND COLOURS</h1>
+          <h1>wait for 5 seconds</h1>
+    </head>
+
+    <body>
+            <script>
+             var colours=['black','blue','yellow','green','red','wheat'];
+  function changeColor() {
+    setTimeout(function innerloop() {
+      document.body.style.backgroundColor = colours.shift();
+      if (colours.length) {
+        setTimeout(innerloop, 5000);
+      }
+    }, 5000);
+  }
+
+ setInterval(changeColor(), 30000);
+</script>
+    </body>
+</center>
+</html>
