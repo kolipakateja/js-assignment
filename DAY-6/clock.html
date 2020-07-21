@@ -1,0 +1,44 @@
+<html>
+<center>
+   <head>
+        <h1 style="color:aqua;">ASSIGNMENT DAY-6  WELCOME MESSAGE</h1>
+    <style>
+     .white{
+            background-color:black;
+            color:aqua;
+             }
+    #one{
+   color:red;
+   font-size:50px;
+     }
+#time{
+   color:blue;
+   font-size:50px;
+     }
+    </style>
+   </head>
+   <body id="mode" >
+     <button onclick="changebackground()">click  here to change theme</button>
+     <p id="one"></p>
+     <h4 id="time"><h4>
+     
+         <script>
+            var name=prompt("please enter  your name");
+            document.getElementById("one").innerHTML=`Welcome <mark>"${name}"</mark> to the world of java script`;  
+            function changebackground(){
+             var mode=document.getElementById("mode");
+             mode.classList.toggle('white');
+              }
+           var tim=document.getElementById("time");
+             function clock()
+                {
+                 var date=new Date();
+                 var time=date.toLocaleTimeString();
+                 tim.innerHTML=time;
+                 }
+            setInterval(clock,1000);
+            
+         </script>
+   </body>
+</center>
+</html>
