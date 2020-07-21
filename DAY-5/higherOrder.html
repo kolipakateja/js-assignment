@@ -1,0 +1,19 @@
+<html>
+  <head>
+       <h1>ASSIGNMENT DAY-5 HIGHER ORDER FUNCTIONS</h1>
+  </head>
+   <body>
+      <script>
+             var num=+prompt("enter the number");
+             var array=[];
+              for(var i=1;i<=num;i++)
+                {
+                array.push(i);
+                 }
+             var oddarray=array.filter((check)=>(check%2==1));
+             var cubes=oddarray.map((element)=>(element*element*element));
+             console.log(`The cubes of the odd numbers upto given N ${cubes}`);
+
+      </script>
+   </body>
+</html>
