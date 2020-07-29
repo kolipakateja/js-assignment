@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<center>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>RANDOM QUOTES</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body{
+            background-color: darkslategrey;
+        }
+        h1{
+            color: aqua;
+        }
+        div{
+            color:blanchedalmond;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        #but{
+            border-radius: 12px;
+            font-size: 16px;
+            background-color: maroon;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <h1>RANDOM QUOTES GENARATOR</h1>
+    <br><br><br><br><br><br><br>
+    <div id="quotehere">I never dreamed about success, I worked for it.</div>
+    <div id="auth" style="color:darkorange;">-- Estee Lauder</div>
+    <br><br><br>
+    <button onclick="Quote()" id="but">Click here for New Quotation</button>
+    
+
+    <script>
+        var quotes=["Success is not final; failure is not fatal: It is the courage to continue that counts.","It is better to fail in originality than to succeed in imitation.",
+        "The road to success and the road to failure are almost exactly the same.","Success usually comes to those who are too busy to be looking for it.",
+        "Opportunities don't happen. You create them.","Don't be afraid to give up the good to go for the great.","I find that the harder I work, the more luck I seem to have.",
+        "Try not to become a man of success. Rather become a man of value.","Never give in except to convictions of honor and good sense.","Stop chasing the money and start chasing the passion.",
+        "Success is walking from failure to failure with no loss of enthusiasm.","Do one thing every day that scares you.","All progress takes place outside the comfort zone.",
+        "Don't let the fear of losing be greater than the excitement of winning.", "If you really look closely, most overnight successes took a long time.",
+        "The only limit to our realization of tomorrow will be our doubts of today."]
+
+        var author=["Winston S. Churchill","Herman Melville","Colin R. Davis","Henry David Thoreau","Chris Grosser","John D. Rockefeller","Thomas Jefferson",
+        "Albert Einstein","Winston Churchill","Tony Hsieh","Winston Churchill","Anony","Michael John Bobak","Robert Kiyosaki","Steve Jobs","Franklin D. Roosevelt"]
+        
+        function Quote()
+        {
+            var randNum=Math.floor(Math.random()*(quotes.length));
+            document.getElementById("quotehere").innerHTML=quotes[randNum];
+            document.getElementById("auth").innerHTML="---"+author[randNum];
+        }
+    </script>
+    
+</body>
+</center>
+</html>
