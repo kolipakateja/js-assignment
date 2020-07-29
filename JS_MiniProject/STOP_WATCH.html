@@ -1,0 +1,83 @@
+<html>
+    <center>
+    <head>
+        <title>STOP WATCH</title>
+        <style>
+            body{
+                background-color: dimgrey;
+            }
+            h1{
+                color: fuchsia;
+                font-size: 40px;
+            }
+            .button {
+               color: rgb(23, 204, 135);
+               font-size: 4vw;
+               margin: 0 0.6em;
+               text-decoration: none;
+                }
+
+            .button:first-child {
+            margin-left: 0;
+            }
+
+            .button:last-child {
+            margin-right: 0;
+            }
+
+            .button:hover{
+              color:red;
+            }
+            h2{
+                font-size: 50px;
+                color:aqua;
+            }
+        </style>
+    </head>
+    <body>
+       <h1>STOP WATCH</h1>
+       <br><br><br><br>
+       <nav>
+           <a onclick="start()" class="button">START</a>
+           <a onclick="stop()" class="button">STOP</a>
+           <a onclick="restart()" class="button">CLEAR</a>
+       </nav>
+       <h2><time>00:00:00</time></h2>
+    <script>
+      var h2 = document.getElementsByTagName('h2')[0],seconds = 0, minutes = 0, hours = 0,t;
+      function add() {
+               seconds++;
+                if (seconds >= 60) {
+                    seconds = 0;
+                     minutes++;
+                    if (minutes >= 60) {
+                        minutes = 0;
+                         hours++;
+                    }
+                }
+                h2.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+
+              timer();
+           }
+           function timer() {
+                t = setTimeout(add, 1000);
+            }
+            function start()
+            {
+                timer();
+            }
+            function stop()
+            {
+                clearTimeout(t);
+            }
+            function restart()
+            {
+                h2.textContent = "00:00:00";
+                seconds = 0; minutes = 0; hours = 0;
+            }
+     
+
+    </script>
+    </body>
+    </center>
+</html>
